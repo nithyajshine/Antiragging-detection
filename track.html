@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+       <head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="text-align:center;font-family:Arial;">
+    <h2>Track Complaint</h2>
+
+    <form method="POST">
+        <input type="text" name="complaint_id" placeholder="Enter Complaint ID" required>
+        <button type="submit">Track</button>
+    </form>
+
+    {% if data %}
+        <h3>Status: {{ data[5] }}</h3>
+        <p><b>Category:</b> {{ data[2] }}</p>
+        <p><b>Priority:</b> {{ data[3] }}</p>
+        <p><b>AI Summary:</b> {{ data[4] }}</p>
+    {% endif %}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

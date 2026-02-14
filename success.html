@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="text-align:center;font-family:Arial;">
+    <h2>Complaint Submitted Successfully ✅</h2>
+    <p>Your Complaint ID:</p>
+    <h3>{{ complaint_id }}</h3>
+    <a href="/">Back to Home</a>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
